@@ -1,42 +1,352 @@
-#root {
-  max-width: 1280px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+/* App Component */
+.App {
+  min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+  background-color: #6c63ff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+nav p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* HomePage */
+.HomePage {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 60px 40px;
+}
+
+.HomePage h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 60px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.companies-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.company-hero {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.company-info {
+  flex: 3; 
+}
+
+.company-card {
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 calc(50% - 20px);
+  min-width: 300px;
+}
+
+.company-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.company-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.company-card p {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CompanyPage */
+.CompanyPage {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.CompanyPage-content {
+  display: flex;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.CompanyPage h2 {
+  color: #000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.company-logo-container {
+  flex: 0 0 auto;
+}
+
+.CompanyPage img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.company-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.CompanyPage h3 {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.CompanyPage h4 {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.CompanyPage p {
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.CompanyPage a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.CompanyPage a:hover {
+  text-decoration: underline;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tech-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex: 0 0 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tech-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.tech-card p {
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* TechnologyPage */
+.TechnologyPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.TechnologyPage h2 {
+  color: #000;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.TechnologyPage > img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.TechnologyPage h3 {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.TechnologyPage p {
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Buttons */
+button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-weight: 500;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  background-color: #5a52d5;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .CompanyPage-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .company-info {
+    align-items: center;
+  }
+
+  .CompanyPage p {
+    text-align: center;
+  }
+
+  .tech-stack {
+    justify-content: center;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .companies-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .company-card {
+    flex: 1 1 auto;
+    min-width: auto;
+  }
+
+  .tech-stack {
+    gap: 15px;
+  }
+
+  .tech-card {
+    flex: 0 0 120px;
+  }
+
+  .CompanyPage h3 {
+    font-size: 2rem;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media (max-width: 480px) {
+  .tech-stack {
+    justify-content: space-between;
+  }
 
-.read-the-docs {
-  color: #888;
+  .tech-card {
+    flex: 0 0 calc(50% - 10px);
+  }
 }
